@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Reaction Reactor</title>
+        <link rel="stylesheet" href="main.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body class="vertical-center-outer">
+        <div class="vertical-center-inner" id="content">
+            <form class=" centered-form" method="GET">
+                <div>
+                    <label for="url-input">URL</label>
+                    <input type="text" name="url" />
+                </div>
+                <div>
+                    <label for="angle-input">Angle</label>
+                    <input type="number" name="angle" min="-360" max="360" value="135" />
+                </div>
+                <div>
+                    <label for="speed-input">Speed</label>
+                    <input type="number" name="speed" value="200" />
+                </div>
+                <button type="submit" class="big-button">REACT</button>
+            </form>
+        </div>
+    </body>
+</html>
