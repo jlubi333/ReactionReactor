@@ -10,20 +10,21 @@
     </head>
     <body class="vertical-center-outer">
         <div class="vertical-center-inner" id="content">
-            <form class=" centered-form" method="GET">
+            <h1>Reaction Reactor</h1>
+            <form id="main-form" class="centered-form" method="GET">
                 <div>
                     <label for="url-input">URL</label>
                     <input type="text" name="url" />
                 </div>
                 <div>
-                    <label for="angle-input">Angle</label>
+                    <label for="angle-input">Angle <small>degrees</small></label>
                     <input type="number" name="angle" min="-360" max="360" value="135" />
                 </div>
                 <div>
-                    <label for="speed-input">Speed</label>
+                    <label for="speed-input">Speed <small><sup>pixels</sup>&frasl;<sub>second</sub></small></label>
                     <input type="number" name="speed" value="200" />
                 </div>
-                <button type="submit" class="big-button">REACT!</button>
+                <button type="submit" id="submit-button" class="big-button" disabled>REACT!</button>
             </form>
         </div>
     </body>

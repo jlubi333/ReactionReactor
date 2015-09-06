@@ -77,6 +77,21 @@
         if (query["url"]) {
             $("#content").hide();
             main(query);
+        } else {
+            $("#main-form input").keyup(function() {
+                var empty = false;
+                $("#main-form input").each(function() {
+                    if ($(this).val() === "") {
+                        empty = true;
+                    }
+                });
+
+                if (empty) {
+                    $("#submit-button").prop("disabled", true);
+                } else {
+                    $("#submit-button").prop("disabled", false);
+                }
+            });
         }
     })
 })();

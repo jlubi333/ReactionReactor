@@ -17,6 +17,15 @@ html, body {
 
 body {
     background-color: #F0F0F0;
+    font-size: 16px;
+}
+
+h1 {
+    width: 80%;
+    font-size: 5em;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 .vertical-center-outer {
@@ -39,10 +48,16 @@ body {
 
 .centered-form label {
     display: block;
+    font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 5px;
     padding-bottom: 5px;
     border-bottom: 1px solid #CCCCCC;
+}
+
+.centered-form label small {
+    font-size: 0.7em;
+    color: #BBBBBB;
 }
 
 .centered-form input[type="text"],
@@ -58,19 +73,32 @@ body {
 .big-button {
     display: block;
     width: 100%;
+    background-color: #AAFFAA;
     font-size: 2em;
     font-weight: bold;
     padding: 10px;
-    background-color:#AAFFAA;
     border: none;
     outline: none;
     border: 1px solid #55CC55;
     border-bottom-width: 2px;
     border-radius: 5px;
     cursor: pointer;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
 }
 
 .big-button:active {
     border-bottom-width: 1px;
     border-top-width: 2px;
+}
+
+.big-button:disabled {
+    background-color: #EEEEEE;
+    color: #BBBBBB;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 1px;
+    cursor: default;
 }
