@@ -57,6 +57,21 @@
         injectStyle(rules);
     }
 
+    function checkInput() {
+        var empty = false;
+        $("#main-form input").each(function() {
+            if ($(this).val() === "") {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $("#submit-button").prop("disabled", true);
+        } else {
+            $("#submit-button").prop("disabled", false);
+        }
+    }
+
     function main(query) {
         var url = decodeURIComponent(query["url"]);
         var angle = parseFloat(query["angle"]) || 0;
@@ -78,19 +93,9 @@
             $("#content").hide();
             main(query);
         } else {
-            $("#main-form input").keyup(function() {
-                var empty = false;
-                $("#main-form input").each(function() {
-                    if ($(this).val() === "") {
-                        empty = true;
-                    }
-                });
-
-                if (empty) {
-                    $("#submit-button").prop("disabled", true);
-                } else {
-                    $("#submit-button").prop("disabled", false);
-                }
+            checkInput();
+            $("#main-form input").keyup(function(event) {
+                checkInput();
             });
         }
     })
