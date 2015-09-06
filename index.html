@@ -8,24 +8,26 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="main.js"></script>
     </head>
-    <body class="vertical-center-outer">
-        <div class="vertical-center-inner" id="content">
-            <h1>Reaction Reactor</h1>
-            <form id="main-form" class="centered-form" method="GET">
-                <div>
-                    <label for="url-input">URL</label>
-                    <input type="text" name="url" />
-                </div>
-                <div>
-                    <label for="angle-input">Angle <small>degrees</small></label>
-                    <input type="number" name="angle" min="-360" max="360" value="135" />
-                </div>
-                <div>
-                    <label for="speed-input">Speed <small><sup>pixels</sup>&frasl;<sub>second</sub></small></label>
-                    <input type="number" name="speed" value="200" />
-                </div>
-                <button type="submit" id="submit-button" class="big-button" disabled>REACT!</button>
-            </form>
+    <body>
+        <div id="content" class="vertical-center-outer">
+            <div class="vertical-center-inner">
+                <h1>Reaction Reactor</h1>
+                <form id="main-form" class="centered-form" method="GET">
+                    <div>
+                        <label for="url-input">URL</label>
+                        <input type="text" name="url" />
+                    </div>
+                    <div>
+                        <label for="angle-input">Angle <small>degrees</small></label>
+                        <input type="number" name="angle" min="-360" max="360" value="135" />
+                    </div>
+                    <div>
+                        <label for="speed-input">Speed <small><sup>pixels</sup>&frasl;<sub>second</sub></small></label>
+                        <input type="number" name="speed" value="200" />
+                    </div>
+                    <button type="submit" id="submit-button" class="big-button" disabled>REACT!</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>
