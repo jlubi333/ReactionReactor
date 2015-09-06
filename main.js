@@ -77,8 +77,6 @@
         if (query["url"]) {
             $("#content").hide();
             main(query);
-        } else {
-            $();
         }
     })
 })();
